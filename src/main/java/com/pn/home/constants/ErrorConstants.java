@@ -18,22 +18,6 @@ public class ErrorConstants {
 	public static final String USR0004 = "USR0004";
 	public static final String USR0005 = "USR0005";
 
-	// Error codes for user template actions
-	public static final String TEMP0001 = "TEMP0001";
-	public static final String TEMP0002 = "TEMP0002";
-	public static final String TEMP0003 = "TEMP0003";
-	public static final String TEMP0004 = "TEMP0004";
-	public static final String TEMP0005 = "TEMP0005";
-	public static final String TEMP0006 = "TEMP0006";
-	public static final String TEMP0007 = "TEMP0007";
-	public static final String TEMP0008 = "TEMP0008";
-
-	// Error codes for preferences
-	public static final String PRE0001 = "PRE0001";
-	public static final String PRE0002 = "PRE0002";
-	public static final String PRE0003 = "PRE0003";
-	public static final String PRE0004 = "PRE0004";
-
 	// error message for utils
 	public static final String UTL0001 = "UTL0001";
 
@@ -51,20 +35,4 @@ public class ErrorConstants {
 	public static final String USR0004_MESSAGE = "User not activated";
 	public static final String USR0005_MESSAGE = "Unable to find user";
 	public static final String UTL0001_MESSAGE = "Unable to generate GUUID";
-
-	// preferences error message
-	public static final String PRE0001_MESSAGE = "Unable to get preference";
-	public static final String PRE0002_MESSAGE = "Unable to add preference";
-	public static final String PRE0003_MESSAGE = "Unable to update preference";
-	public static final String PRE0004_MESSAGE = "Unable to delete preference";
-
-	// Template error messages
-	public static final String TEMP0001_MESSAGE = "Unable to create template for the user";
-	public static final String TEMP0002_MESSAGE = "Unable to update template for the user";
-	public static final String TEMP0003_MESSAGE = "Unable to delete template for the user";
-	public static final String TEMP0004_MESSAGE = "Template is a duplicate";
-	public static final String TEMP0005_MESSAGE = "Template does not exist";
-	public static final String TEMP0006_MESSAGE = "Unable to get user template";
-	public static final String TEMP0007_MESSAGE = "Unable to get templates associated with user";
-	public static final String TEMP0008_MESSAGE = "There are no templates associated with the user";
 }

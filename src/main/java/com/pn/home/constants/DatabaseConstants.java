@@ -19,4 +19,11 @@ public class DatabaseConstants {
 	public final static String USERS_ACTIVATE_USER = "UPDATE " + USER_TABLE
 			+ " SET activated = 'true' WHERE username = ?";
 	public final static String USERS_ALL = "SELECT * FROM " + USER_TABLE;
+
+	// datasource config
+	public final static String DATABASE_URL = "jdbc:sqlserver://localhost:1433;databaseName=mfuser-master-dev001";
+	public final static String SQL_SERVER_DRIVER = "com.microsoft.sqlserver.jdbc.SQLServerDriver";
+	public final static String DATABASE_NAME = "databaseName=mfuser-master-dev001";
+	public final static String DB_USER = "sa";
+	public final static String DB_PASS = "Sausages_99";
 }

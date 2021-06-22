@@ -19,7 +19,7 @@ import com.pn.home.util.JwtTokenUtil;
 
 @Service
 public class AuthService {
-	public String isAuthorised(@RequestHeader Map<String, String> headers, String feObject)
+	public String isAuthorised(@RequestHeader Map<String, String> headers, String feIntId)
 			throws JsonParseException, JsonMappingException, IOException {
 		ObjectMapper objectMapper = new ObjectMapper();
 		boolean result = false;
@@ -31,7 +31,8 @@ public class AuthService {
 		UserTransfer usern = objectMapper.readValue(jwtTokenUtil.getUserDetailsObjectFromToken(token),
 				UserTransfer.class);
 
-		String whatToCheck = AppConstants.AUTH_MAP.get(feObject);
+		String whatToCheck = AppConstants.AUTH_MAP.get(feIntId);
+		// TODO specify EXACT match on ROLE_ADMIN
 		result = whatToCheck != null ? usern.getAuthorities().stream()
 				.anyMatch(obj -> obj.getAuthority().toUpperCase().contains(whatToCheck.toUpperCase())) : false;
 

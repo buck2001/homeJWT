@@ -62,7 +62,8 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 				// all other requests need to be authenticated at least; REST methods will
 				// control authorisation
 				.anyRequest().authenticated().and().
-				// make sure we use stateless session; session not be used to store state.
+				// use our JWT entry point for authenticating and make sure we use stateless
+				// session; session not to be used to store state.
 				exceptionHandling().authenticationEntryPoint(jwtAuthenticationEntryPoint).and().sessionManagement()
 				.sessionCreationPolicy(SessionCreationPolicy.STATELESS);
 

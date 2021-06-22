@@ -15,8 +15,6 @@ public class AppConstants {
 	public final static String USER_API = "/user";
 	public final static String AUTH_API = "/auth";
 	public final static String AUTH_ROLES_API = "/roles";
-	public final static String TEMPLATES_API = "/templates";
-	public final static String PREFERENCES_API = "/preferences";
 	public final static String PREFERENCES_GET = "/{organisationId}";
 
 	// headers
@@ -26,10 +24,6 @@ public class AppConstants {
 	public final static String HEALTH_CHECK = "I'm Alive!";
 	public final static String HEALTH_CHECK_URL = "/health";
 	public final static String ROLE_CHECK = "/rolecheck";
-	public final static String URL_SECRET_REGION = "eu-west-2";
-	public final static String AWS_JWT_TOKEN_ENCRYPTION_IDENTIFIER = "jwtTokenEncryption";
-	public final static String AWS_DATABASE_IDENTIFIER_SECRET = "mfuser-master-"; // "mf-sql-database"; // TODO
-	public final static String AWS_DEV_DATABASE_IDENTIFIER = "fnol"; // "mf-sql-database"; // TODO
 	public final static String DEFAULT_TOKEN_STRING = "XM=SgSXh9K0mk3?";
 	public final static String ENV_IDENTIFIER = "env";
 	public final static String DEV_ENV_IDENTIFIER = "dev";
@@ -51,10 +45,6 @@ public class AppConstants {
 	public final static String URL_DEACTIVATE = "/deactivate/{userName}";
 	public final static String URL_FIND_REGISTER = "/find";
 	public final static String URL_UPDATE_PASSWORD = "/updatepassword";
-
-	// Template literals
-	public final static String URL_GET_TEMPLATES = "/getAll/{id}";
-	public final static String URL_DELETE_TEMPLATE = "/deleteTemplate";
 
 	// string literals
 	public final static String UNAUTHORISED = "Unauthorized";
@@ -87,8 +77,7 @@ public class AppConstants {
 	public final static String COLON = ":";
 	public final static String SPACE = " ";
 	public final static String EMPTY_STRING = "";
-	public final static String PREFERENCES_METHODS = "Preferences";
-	
+
 	public final static String NEW_LINE = "\n";
 	public final static String TAB = "\t";
 	public final static String QUOTATION_MARK = "\"";
@@ -96,7 +85,6 @@ public class AppConstants {
 	public final static String PERCENTAGE_SIGN = "%";
 	public final static String OPEN_BRACKET = "(";
 	public final static String CLOSE_BRACKET = ")";
-
 	public final static String SLASH = "/";
 	public final static String equals = "=";
 	public final static String SQUARE_BRACKET = "[]";
@@ -109,19 +97,6 @@ public class AppConstants {
 	public final static String LOGGER_NO_OBJECT = "No object";
 	public final static String LOGGER_NO_ID = "No id";
 
-	// database stuff
-	public final static String SQL_SERVER_DRIVER = "com.microsoft.sqlserver.jdbc.SQLServerDriver";
-	public final static String SQL_SERVER_LOCALHOST = "jdbc:sqlserver://localhost:1433;databaseName=fnol";
-	public final static String SQL_SERVER_DEFAULT_PROD_HOST = "jdbc:sqlserver://lm-rds-dev003-ins001.cytuubs5djbn.eu-west-2.rds.amazonaws.com;databaseName=mfuser-master-dev001";
-	public final static String SQL_SERVER_DEFAULT_PORT = "1433";
-	public final static String SQL_SERVER_DEFAULT_USERNAME = "sa";
-	public final static String SQL_SERVER_DEFAULT_PASSWORD = "Sausages_99!!!!";
-	public final static String SQL_SERVER_DEFAULT_USERNAME_PROD = "mfuser-master-dev001.dbo";
-	public final static String SQL_SERVER_DEFAULT_PASSWORD_PROD = "KLV94Y8F7C3L8MNB";
-	public final static String SQL_SERVER_DEFAULT_DATABASE_PROD = "lm-rds-dev003-ins001";
-	public final static String SQL_JDBC_DB_PREFIX = "jdbc:sqlserver://";
-	public final static String SQL_DATABASE_PREFIX = ";databaseName=";
-
 	// env
 	public final static String DEV_ENV = "dev";
 	public final static String TST_ENV = "tst";
@@ -133,20 +108,25 @@ public class AppConstants {
 	private static Map<String, String> createMap() {
 		Map<String, String> myMap = new HashMap<String, String>();
 		myMap.put("01", "QA"); // for all QA actions and related buttons etc.
-		myMap.put("02", "ADMIN"); // for administrataors
+		myMap.put("02", "ADMIN"); // for administrators
 		myMap.put("03", "TECHNICIAN"); // for techs
 		myMap.put("04", "BROKER"); // for brokers
 		myMap.put("05", "CARRIER"); // for carriers
-		myMap.put("05", "OTHER"); // for others?
+		myMap.put("06", "OTHER"); // for others?
 
 		return myMap;
 	}
-	
+
 	public final static String DATE_AND_TIME_FORMAT = "dd-MM-yyyy HH:mm:ss";
 	public final static String DATE_FORMAT = "dd/MM/yyyy";
 	public final static String SQL_DATE_FORMAT = "yyyy-MM-dd";
 	public final static String SQL_DATE_FORMAT_ALT = "dd-MM-yyyy";
 	public final static String SQL_DATE__TIME_FORMAT_ALT = "dd-MM-yyyy HH:mm:ss";
-	
-		
+
+	// AWS stuff
+	public final static String URL_SECRET_REGION = "eu-west-2";
+	public final static String AWS_JWT_TOKEN_ENCRYPTION_IDENTIFIER = "jwtTokenEncryption";
+	public final static String AWS_DATABASE_IDENTIFIER_SECRET = "mfuser-master-"; // "mf-sql-database"; // TODO
+	public final static String AWS_DEV_DATABASE_IDENTIFIER = "fnol"; // "mf-sql-database"; // TODO
+
 }

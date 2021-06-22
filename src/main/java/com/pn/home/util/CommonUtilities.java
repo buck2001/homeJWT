@@ -9,12 +9,11 @@ import java.util.Date;
 import java.util.List;
 import java.util.Map;
 import java.util.UUID;
-import java.util.regex.Pattern;
 
+import com.pn.home.common.AppException;
+import com.pn.home.common.AppExceptionHandler;
 import com.pn.home.constants.AppConstants;
 import com.pn.home.constants.ErrorConstants;
-import com.pn.home.errorHandling.AppException;
-import com.pn.home.errorHandling.AppExceptionHandler;
 
 public class CommonUtilities {
 	/**
@@ -130,7 +129,6 @@ public class CommonUtilities {
 		}
 		return values;
 	}
-
 
 	/**
 	 * Check if string value is numeric
